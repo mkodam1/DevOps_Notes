@@ -1,0 +1,115 @@
+Apache Maven Installation On Windows:
+    Prerequisites: Java should be installed.
+    
+  a.From Maven download page, download the binary zip archive of Maven. 
+    Create a Folder named Maven in Program Files.
+    Extract the Maven archive to C:\Program Files\Maven once the download is complete. 
+    
+  b.Set Environmental Variables for Maven- Setting the Path 
+    Open the Start menu and search for environment variables.
+    Select the "Edit the system environment variables".
+    In the System Properties window, under the Advanced tab, click Environment Variables.
+    Under the System variables category, select the Path variable and click Edit.
+    Click the New button and enter %MAVEN_HOME%\bin in the new field. 
+    Click OK to save changes to the Path variable.
+    
+  c.Add MAVEN_HOME Variable
+   In the Environment Variables window, under the System variables category, click the New… button to create a new variable.
+   Name the variable as MAVEN_HOME.
+   In the variable value field, paste the path to Maven directory and click OK.
+    C:\Program Files\Maven\apache-maven-3.8.4.(version depends on the installation version)
+   Click on OK button.
+   
+   d.Test the Maven Installation
+    Run the mvn -version command in the command prompt to make sure Maven installed correctly.
+    If installed correctly, the command outputs the Maven version.    
+    Note: Sometimes we need to run as adiministrator to view the version in command prompt.
+    Type "cmd" in the path and press enter.
+    C:\Windows\System32\cmd.exe
+    Now check the maven version.
+
+Build Automation System is language specific.
+     For Java Projects ---------------Maven is used mostly. Gradle and Ant are also used sometimes.
+     For C Projects-------------------Make/CMake is used.     
+    
+  y. Maven: Maven is a tool that is used to compile, validate codes and analyse the test cases in the code.(Apache Maven)
+     It manages the building, reporting and documentation from Source Control Management(SCM).
+     Maven projects are configured through Project Object Model(POM).
+     pom.xml file contains documentation for all the objects, properties, methods and events.
+     
+     Maven is capable of:
+     1. Gathering the data about the software project and build on its own.
+     2. Managing the build process.
+     3. Software project is modeled by Maven.
+     4. Project Information is centralized through Maven.
+     5. Maven documents the software and project.
+     6. Deployable artifacts are generated from source code.
+     7. Maven compiles the source code, packaged,tested and distributed.
+     8. Reports are created and website is generated for the project.
+     
+     Objectives of Maven:
+     1. Make the build process easy.
+     2. Provide uniform build system.
+     3. Gives quality project information.
+     4. Provide guide lines for best practices development.
+     5. Allow transparent migration to new feautures.
+     
+     Maven Build Lifecycle:
+     1.In Maven, the build is run using a predefined and ordered set of steps to call the build life-cycle.
+     2. The configuration in the project file determines the build tasks that will be performed during each phase.
+     3. Maven relies on build lifecycles to define the process of building and distributing artifacts(Ex: Jar files, war files).
+     4. There are three built-in build lifecycles.
+        . Default-handles project building and deployment.
+        . Clean -handles project cleaning
+        . Site - handles project site generation.
+        
+      POM.xml File contains:
+      
+        <groupID>-------------------Organisation deploying the project
+        <artifactID>----------------Project Name
+        <Version>-------------------Current version (SNAPSHOT-means work in progress)
+        POM will contain the project details, Plugin's and Project's Maven Configuration.
+      Output of project is war files.
+      
+     Maven Architecture: 
+     It will consist of Remote Repositories, Local Repositories, Core Engine and Plug-in's.
+     
+     Plug-in: It provides extra functionality and gives more commands.
+     Dependencies: Are required todointernal tasks, no extra commands.
+     
+     Dependencies:
+     1. Maven comes into picture for dependencies.
+     2. Manages hundreds of plug-ins.
+     3. Dependencies get cached into the local repository.
+     4. Manages the transitive dependencies.
+     5. Provides multiple scope for including dependencies.
+     
+     Maven through terminal:
+     Pre-requisite: Java needs to be installed for Maven to run.
+     JDK-Java development toolkit which includes JRE(Java Runtime Environment) and JVM(Java Virtual Machine).
+     JDK also includes number of programming tools, like a compiler and java webserver.
+     
+     1. Install the Maven tar file after verifying the signature.
+     2. After installing the Maven, check its version from ubuntu terminal with the command
+        $mvn -version
+     3. The below command is used to create a project using Maven
+        $mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+     
+     Build the Package in Maven through terminal:
+     1.Command to build the Maven project
+        $mvn package
+     2.The newly compiled and build project can be tested by using the below command
+        $java -cp target/my-app-1.0 proj_name.jar com.mycompany.app.App
+        the above command will print the output of the project
+     
+     Maven Lifecycle Phases:
+     1. validate-check if project is correct, having all the necessary information.
+     2. compile-compile the source code of the project.(It will download all plug-ins, compile all the files and generate POM.xml file).
+     3. test-Test the compiled source code using a suitable unit testing framework. These tests should not require the code to be packed or deployed.
+     4. package-Take the compiled source code and package it in its distributable format, such as a JAR.
+     5. integration-test-process and deploy the package into an environment where integration tests can be run.
+     6. verify-run any checks to verify the package is valid and meets quality criteria.
+     7. install-install the package into the local repository, for use as a dependency in other projects locally.
+     8. deploy-copies the final package to the remote repository for sharing with other developers and projects. Done in an integraton or release environment.
+     
+     If we execute any phase, it will execute previous phases as well.

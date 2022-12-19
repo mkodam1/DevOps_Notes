@@ -1,0 +1,43 @@
+Java Installation On Windows:
+a.Check if Java Is Installed
+  Before installing the Java Development Kit, check if a Java version is already installed on Windows.
+  Open a command prompt by typing cmd in the search bar and press Enter.
+
+  Run the following command:
+  java -version
+  The command outputs the Java version on your system.
+  If Java isn't installed, the output is a message stating that Java isn't recognized as an internal or external command.
+  
+ b.Download Java for Windows 10
+  Navigate to the Oracle Java Downloads page.
+  Click the x64 Installer download link under the Windows category. 
+  Download the installation file.
+  
+ c.Install & Configure the Installation Wizard
+   Create a folder called Java in Program Files.
+   Double click on the Installer and finish installation.
+   After successfully Installed message appears,clocse the wizard.
+   
+ d.Set Environmental Variables in Java- Setting the Path and JAVA_HOME
+    Open the Start menu and search for environment variables.
+    Select the Edit the system environment variables.
+    In the System Properties window, under the Advanced tab, click Environment Variables.
+    Under the System variables category, select the Path variable and click Edit.
+    Click the New button and enter the path to the Java bin directory.
+      C:\Program Files\Java\jdk-17.0.1\bin
+    Click OK to save the changes.
+    
+ e.Add JAVA_HOME Variable
+   In the Environment Variables window, under the System variables category, click the New… button to create a new variable.
+   Name the variable as JAVA_HOME.
+   In the variable value field, paste the path to your Java jdk directory and click OK.
+    C:\Program Files\Java\jdk-17.0.1.
+   Click on OK button.
+   
+  f.Test the Java Installation
+    Run the java -version command in the command prompt to make sure Java installed correctly.
+    If installed correctly, the command outputs the Java version.
+    Note: Sometimes we need to run as adiministrator to view the version in command prompt.
+    Type "cmd" in the path and press enter.
+    C:\Windows\System32\cmd.exe
+    Now check the java version.

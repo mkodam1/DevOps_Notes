@@ -1,0 +1,115 @@
+Introduction to Linux---Its a Open Source Operating System modelled on Unix and developed in C, which can be downloaded and customised.
+Companies using Linux:
+Facebook platform is built on modified version of CentOS. CentOS is Noncommercial, while Red Hat is commercial( money for support). 
+Red Hat comes with proprietary software packages and enterprise support.
+Dream Works----Uses linux for security, reduce cost, increase efficiency.
+Google----goobunta(customized linux distribution)
+Munich---LiMux(customized linux distribution)
+NASA
+
+Open Source: A S/W becomes open source if its source code is freely available. Anyone can download, modify.
+Closed Source: Propritery software(Microsoft,Adobe)
+
+Linux Vs Unix
+Cost--Linux is free whereas Unix is not free.
+Flexibility--Linux is flexible whereas Unix is not flexible(compatible with lesser hardware).
+Source code-Available whereas not available in Unix(as its not a freeware)
+Installation-Economical whereas in Unix its uneconomical(Unix requires specific hardware).
+Community-wide network of developers whereas Unix has limited commercial developers.
+Support-Depends on forums and community for support in Linux whereas vendors provide technical support for commercial Unix.  
+Bug Fixes-Bug Fixing is faster in linux than in Unix.
+
+Features of Linux: It is Reliable( no need to Reboot repeatedly), Support(Huge base of developers), Monitory cost is less, It is Open Source,
+Licensing freedom(reuse and republish the code), customized,  enhancements are frequent, very Secure OS.
+
+Where Linux is used-----Servers, embedded systems, android, NASA, Supercomputers, Gaming and Visual effect servers.
+
+Components of Linux OS: Init Program---the 1st program which is responsible for the initialization of the system. Ex:sysvinit, systemd
+Bootloader--Program which loads the OS when system is turned on. Ex: GNU Grub, Grub2,Syslinux
+Software Libraries--Set of programming code used to develop and design software programs.(dynamic link libraries----dll)
+Package Management System--A collection of tools for Installation, deletion, configuration and upgradation of software. RHL8---RPM, dpkg.
+Other Interface and Applications: various applications and interfaces are used for various tasks performed by user.
+
+Architecture of Linux OS: Application, Shell, Kernel and Hardware.
+Application:Executes the utllity commands.
+Shell:It is an Interface/Interpretere to Kernel(hides the complexities to user).Takes the command in Human language and gives to kernel in binary language.
+Kernel:It consists of core components of O/S, which operate with the hardware and provide low level services to upper layers.
+Hardware-It consists of all the Pheripherals.
+
+Types of Shell:Bash,C Shell, korn shell, tsch shell
+Bash-Bourne Again Shell was written to enhance the functionality of sh(Bourne-Shell)
+First line in Shell Scripting-#!/bin/bash-This command tells linux to run with bash interpreter.
+
+What is Linux Distribution: It is an OS having Linux Kernel and GNU tools packed with some more applications.
+1. Ubuntu 2.Debian 3.Red Hat Linux 4.Fedora 5.CentOS
+Ubuntu is very popular as it is easy to use, secure,reliable, multi-variant releases. Ex:Desktop,Server.
+
+Types of Files in Linux: File, Run Level, Pipe
+File-In linux everything is a file(Ex:Files, directories,socket,links etc)
+'-' means its a normal file
+'d' means its a normal directory
+'l' means symbolic link (shortcut to file/directory)
+'s' means sockect(pass the data between two Processes)
+'p' means its a pipe(similar to socket, but users cannot work with it directly)
+'c' Processes character hardware communication
+
+Run Levels: The init figures out the default run-level to start the associated script w.r.t the configured run level.
+ we can manually change the run level using the telinit command and superuser has permission to modify the run-level.
+ It is an operational level which describes the current state of the system w.r.t the services available.
+ It is a single digit integer that defines the state of the system.
+ a. '0'-Halt the system.
+ b. '1'-Single user mode
+ c. '2'-Multiple user mode with no network File System.
+ d. '3'-Multiple user mode in CLI but no GUI.
+ e. '4'-User definable
+ f. '5'-Multiple user mode in GUI
+ g. '6'-Reboot
+
+Pipe: Pipe('|') is used to direct the output of one command to another.
+ Creates an internal connection between 2 or more commands.
+ Data is passed to other commands directly instead of using temporary text files. 
+ The Pipe is unidirectional and data flows from left to right.
+ Pipe along with grep is most commonly used Ex: cat fil.txt | grep "Linux"
+ 
+Commands:
+a.echo "Display message"--------------(echo is used to display messages on screen).
+   output: Display message
+    
+ b. echo $SHELL----------------to know which type of shell is available in this linux.
+    output: /bin/bash
+    
+ c. There are 4 types of cat commands:
+   1.To create a File
+      cat ><File1.txt>---------------This command will create a File File1.txt and will open it to write information.
+      Ex: cat >F1.txt
+      Pressing ctrl + d will deny the next line.
+    2. To add to a file
+       cat >><File1.txt>-------------This command will add more data to the existing line. To append data this command is used.
+       Doesn't work in interactive mode.
+    3. To view a file
+       cat/etc/shell2----------------------to view the contents of a file without going inside the file. Here all the contents of shell2 are displayed.
+        cat 'Filename'-------------------here the contents of Filename are displayed.
+        cat file.txt | grep “Linux”----------view the contents & fetching the word “Linux”.
+    4. To overwrite a file
+       create one two more File2.txt and File3.txt Add some data.
+       cat File1.txt File2.txt >File3.txt-----The contents of file(File3.txt) will be over written with files(File1.txt and File2.txt).
+       
+ e. clear-----------------clears the screen  or (ctrl+l)  or 
+    alias  c=clear
+    c
+  f. ls------------------lists all the files and directories but without colour coding we cannot make out if its a file or directory.
+ 
+ g. ls -l---------------lists all properties of its files and folders like permissions, size, timestamp etc.
+Here ‘–‘ at the begining of the line indicates that it is a File. ‘d’ at the begining of the line indicates that it is a directory. ‘l’ at the begining of the line indicates that it is a linked file. 
+ h. ls -l | grep "^-"--------------to view only files from all the files and directories.
+   ls -l | grep "^d"--------------to view only directories from all the files and directories.
+  i. touch file1---------------------creates an empty file(file1)  
+  j. touch file(1,2,3)---------------creates multiple empty files in a single command with extension .txt.
+  k. #!/bin/bash--------------------first line in shell scripting. 
+  l. whoami--------------------------used to know current logged in user.
+$--------------For regular user this prompt is displayed with limited privileges
+#--------------For super user this prompt is displayed with all privileges
+m. pwd-----------------------present(print) working directory or to know what directory we are working with.
+n. mkdir dir1-----------------to create a directory
+  mkdir dir1 dir2 dir3------to create multiple directories.
+  mkdir –p india/telengana/hyd----------------to create nested directories, where ‘p’ is parent directory.

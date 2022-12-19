@@ -1,0 +1,123 @@
+oftware development life cycle(SDLC): It is a methodology to develop software.
+
+Software Development Life Cycle-Requirement Gathering/ Requirement Analysis------->Plan------->Design------>Implement---->Test------>Deployment & Maintenance
+a.In Requirement Gathering & Analysis, we come to an Agreement on the Time duration as well apart from requirement gathering and doing feasibility study on requirement.
+ Roles-Business Analyst, Engagement Team
+    Business Analyst-He gathers requiremnts also specifies additional features which he can offer.
+    Engagement Team-They focus more on financial matters,  which s/w is going to cost how much.
+b.Plan:we decide the technology,budget,tools,Schedules/Resources.
+c.Design-how the application is going to look like(High level and Low level designing). How many Modules.
+d.Implement-writing code, build the application(involves compiling, unit testing, packaging).
+e.Test-UAT
+f.Deployment and Maintenance-we release the application and application is monitered.Support
+
+waterfall Model is linear and sequential.
+
+Why DevOps-To overcome the limitations of waterfall model.
+
+Limitations of waterfall model:
+a.We cannot go back in the cycle to correct our mistakes.
+b.It will take a long time for the project to be completed and no working software. 
+c.High amt of risk and uncertanity.
+d. It is not suitable for complex projects
+
+Agile Methodology:
+a.Customer gives the requirements which needs to be completed.
+b.Each project is broken down into several Iterations.
+c. Every iteration is 2-8 weeks duration.
+d. At the end of iteration, a working model(product) is available to get feedback.
+
+Development Team wants change, while the operations team wants stability. Development with devops culture will result in Team work in coordination.
+
+The Panacea-DevOps:
+Development challenges
+
+Operations challenges              								DevOps Solution
+a.Up Time-Difficult to maintain uptime of Production Env.					a.Containerization/virtualization ensures a stimulated Env to run the s/w.
+b.Toils-Tools to automate infrastructure mgt are not effective					b.Configuration Mgt helps to organize and execute configuration plans consistently.
+c.No of servers to be monitored increases							c.Continuous Monitoring
+d.Difficult to diagnose and provide feedback on the product					d.Effective monitoring and feedback system is established through Nagios.
+
+DevOps: Is a practice that allows a single team to manage the entire application development life cycle that is development, testing, deployment amd monitoring.
+Its a combination of practices and tools which help to build, test ,deploy and monitor the software, faster than the traditional software development processes.
+
+Lifecycle of DevOps-------Plan--Code--Build--Test--Release--Deploy--Operate--Monitor 
+
+What does DevOps do- Integrates developers and operations Teams
+Improves collaboration and productivity by
+ a.Automating Infrastructure
+ b.Automating Workflows
+ c.Continuously measuring app performance
+
+Benefits of DevOps: Cost avoidance, Accelerated Innovation,Speed and Agility, Flexibility, IT Efficiency
+
+DevOps Adoption-will result in Cultural Transformation, Process Transformation,Technology Transformation, Automate everything and adoption of tools.
+
+Skills of DevOps Engineer:
+Skills           					Description
+a. Tools						Version Control-GIT
+							Continuous Integration-Jenkins
+							Virtualization/Containerization-Docker/Kubernetes
+							Configuration Mgt-Puppet/Ansible
+							Monitoring-Nagios
+							
+b. Networking Skills					General Networking Skills-Establishing connection between the containers/Port Forwarding/Container Orchestration.
+
+c.Other Skills						People Skills
+							Process Skills
+							Customer Skill and Empathy
+							Cloud Awareness
+
+
+Plan---->Code------>Build------>Test------>Release------>Deploy---->Operate---->Monitor
+Plan: It is the first stage of DevOps where you Plan, track, visualize & Summarize your project before starting it.
+Some of the Planning Tools are: JIRA, Trello, Tricentis
+
+Code: It is the Second stage of DevOps where code is stored in respective versions.
+Some of the Coding Tools are: GIT, Eclipse
+
+Build: Build is a pre-release version.Identified by build no, rather than release number.
+Some of the Build Tools are: Jenkins,Maven, gradle, <Apache Ant>
+
+Test: Executing automated tests inorder to know the risks ASAP.
+Some of the Test Tools are:Selenium, JUnit, JMeter.
+
+Release: Helps to integrate code into a shared repository, with the help of which we can locate and detect errors quickly and easily.
+Some of the Release Tools are: GitLab, Bamboo, Travis CI
+
+Deploy:Manage and Maintain development and deployment of software systems and servers in any computational environment.
+Some of the Deploy Tools are: aws, CHEF, Ansible
+
+Operate:This phase is to keep the system upgraded with the latest update.
+Some of the Deploy Tools are: aws, CHEF, Ansible
+
+Monitor: It ensures that the environment is stable and the application is working as desired.Determines a service unavailability and its causes.
+Some of the monitoring Tools are: Nagios, sensu, splunk>, Prometheus by Grafana.
+
+Version Control/Source Code Management-System that records changes to documents, computer programs, large websites and other collection of information over time.
+
+Continuous Integration-A development practice that requires developers to integrate code into a shared repository several times a day. By integrating regularly,
+we can detect errors quickly and locate them more easily.
+
+DevOps Stages: 
+ a.Developers check-in code in (git)Version control tool/Source Code Management Tool.-------to ensure continuous Integration.
+   Any change to project codebase is verified, compiled, Unit tested. Static code analysis is done to check whether its breaking something.
+ b.Continuous testing- GUI, UAT is done with tools like Selenium.
+ c.Continuous deployment-Any and every change is deployed through containerization/virtualization and configuration management. This is called continuous deployment.
+ d.Continuous monitoring-This is achieved through tools like Nagious, splunk, zabbix, ECK.
+
+**DevOps Delivery Pipeline: 
+Version control--->Build--->Unit Test---->Deploy--->Auto Test---->Deploy to Production------->Measure + Validate
+Whenever a new feature is developed, it is checked-in to Version control tool(Ex:Git).The new feature is build with tools like Maven.
+It is unit tested with tools like JUnit and deployed to QA with tools like Ansible.The build is auto tested with tools like Selenium by the System and deployed to Production
+Containerization and Container Orchestration is achieved through Docker/Kubernets. Finally the build is Monitored(Measured and validated) with tools like Prometheus Grafana.
+At every stage i.e Build, Unit Test, Deployment to QA, Auto Test, Deployment to Production, feebback is continuously provided whenever there is a failure.
+Terraform on cloud-- AWS---EC2,VPC, S3.
+
+DevOps Engg is responsible for : Manage Delivery Pipeline
+   				|---------------->CI/CD (Jenkins/K8s/Docker/Ansible)
+				|---------------->Training(How to use Jenkins, GIT)
+				|---------------->Automation-Reports / Glue Scripts
+				|---------------->Provision/Configure-Linux Server
+				|---------------->Monitoring(Jenkins/K8s)-correct configuration
+DevOps Engg is not responsible for: Writing Application Code, writing Test Code, manage build systems.	

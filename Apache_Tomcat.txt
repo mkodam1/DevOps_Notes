@@ -1,0 +1,50 @@
+Installation of Apache Tomcat on Windows:
+    Apache Tomcat is an open-source web server and servlet container for Java code.
+    Prerequisites:
+    Java should be installed.
+   
+    Install Tomcat Using the zip Archive:
+   a. Download the 32bit/64bit Windows zip file, depending on Windows version, unzip the downloaded file. Right-click the file and select Extract all.
+   b. Extract the archive contents to C:\Program Files\Tomcat(create a folder named Tomcat).
+   c. Navigate to the conf sub-directory within the extracted directory and locate the server.xml file.(Note:Back up the .xml files before making any changes.)
+   d. The default connection port is 8080. Edit the server.xml file with a text editor, such as Notepad++.
+      Change the connector port number to any number between 1024 and 65535.
+   e. To enable directory browsing, locate the web.xml file in the conf directory and edit the file with a text editor. 
+      Directory browsing helps when testing the system, and it may be the solution for a 403 forbidden error.
+      Locate the following lines and change the listings value from false to true:
+      
+      <servlet>
+      <servlet-name>default</servlet-name>
+      <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+      <init-param>
+      <param-name>debug</param-name>
+      <param-value>0</param-value>
+      </init-param>
+      <init-param>
+      <param-name>listings</param-name>
+      <param-value>false</param-value>
+      </init-param>
+      <load-on-startup>1</load-on-startup>
+      </servlet>
+    f. Implement an auto-reload feature by editing the context.xml file. Auto-reload feature will prevent restarting the server manually each time a change is made.
+      Locate the following line and change the value from false to true in each instance:
+
+      <Context reloadable="false" crossContext="false" parallelAnnotationScanning="false">
+       ......
+       ......
+      </Context>
+    g. After making the changes, start the server. Press the Windows key and type cmd. Press Enter to open a Command Prompt window.
+    h. Move to the bin directory of your Tomcat server and run.
+       startup  (Ex:cd c:\tomcat\bin>startup)
+    i. Add an exception for Tomcat in the firewall.
+    j. A new Tomcat console window appears. This console receives error messages and system.out.println() messages issued by the Java servlets.
+    k. Access the server using a browser as an HTTP client. Browse to http://localhost:8080 and access the Tomcat welcome page to ensure the server works.
+    l. Shut down the Tomcat server by pressing Ctrl+C on the Tomcat console.
+    
+    appache tomcat folder structure:
+    temp--holds temporary files
+    webapps-deployable folder-war file,jar file paste, where ican deploy application
+    bin-how to create user
+    conf-port number change,will create user. web.xml, server.xml used for conf
+    lib-library files
+    log-all logs--when server started, server variables

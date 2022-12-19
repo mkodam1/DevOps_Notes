@@ -1,0 +1,36 @@
+How to create a Windows VM and run GIT in it:
+Login to AWS console. 
+Click on Instances.
+Click on Launch Instances button.
+Provide a name for the web server.
+Select the Microsoft Windows operating system.
+Select a Key pair name.
+In the Network Settings, selet 'Create security group' radio button.
+Check the 3 Check boxes, Allow SSH traffic from, Allow HTTPS traffic from the Internet,Allow HTTP traffic from the Internet. Click on 'Launch Instance' button.
+Go to Instances, Check the checkmark for Instance, click on connect. 
+The user is navigated to 'session manager'tab, click on 'RDP client' tab.
+Click on 'Download remote desktop file'. (The remote desktop file is downloaded to downloads)
+Click on 'Get Password'. Now click on the 'Upload private key file'.
+Upload the private key(Ex:winkey.pem).
+Now click on the 'Decrypt password' button.
+Copy the decrypted password.
+Run the Remote Desktop Connection (RDC) from the downloads
+Paste the password and click "OK'.
+The Remote Desktop is launched.
+Now go to "https://git-scm.com/downloads" (Gitbash for windows)
+Click on "Download for Windows".
+Click on "64-bit Git for Windows Setup". Run the installer, in the last page of installer,uncheck the newsletter checkbox and check the Launch installer checkbox. Click on Finish button.
+
+How to create a VM with Ubuntu:
+a. Login to AWS console. 
+b. Click on EC2.
+c. Click on Instances.
+d. Click on Launch Instances button.
+e. Provide a name for the web server.
+f. Select the Ubuntu operating system.
+g. Select a Key pair name.
+h. In the Network Settings, selet 'Create security group' radio button.
+i. Check the 3 Check boxes, Allow SSH traffic from, Allow HTTPS traffic from the Internet,Allow HTTP traffic from the Internet. Click on 'Launch Instance' button.
+j. Go to Instances, Check the checkmark for Instance, click on connect. 
+k. User is navigated to "Ec2 Instance Connect" tab
+l. Click on "Connect" button.

@@ -1,0 +1,124 @@
+Why we need version control?
+There are different people working in a project across globally,then there is a need for collaboration between them, so that they all are on the same page. 
+a.How to collaborate? How each can store their code?
+    We keep the files in fileshare system.
+b. Concurrent development-How to solve overwrite(code) problem.
+c. Tracking changes- Problem in tracking changes( cannot makeout who changed what)
+d. Backup-If a persons system crashes, then all his code is gone.In order to overcome this, backup is centralized.
+
+What is version control?
+Version control is a system that documents changes made to a file or a set of files. 
+It allows multiple users to manage multiple revisions of the same unit of information. It is a snapshot of the project over time.
+a.VCS tool automatically solves collaboration.
+b.Concurrent development-Makes sure code is not overwritten. Helps prevent concurrent work from conflicting.
+c.Tracking change enabled-whenever there is a change, it records it.(timestamp). Who made the change is recorded.
+d.Backup-They come with their own strategy  for backup.
+
+Meta data:Complete information about project.
+Version Control types: LVC(Local Version Control), Centralised Version Control, Distributed Version Control.
+ a.LVC-The practice of having version database(meta data) in the local computer. The local DB keeps track of the changes made to files in version DB.
+ b.Centralised Version Control-The metadata is on a central server, which is accessed by each developer. 
+    He pulls the data(checkout) makes changes and submits it back(checkin). But developer needs network connectivity to make changes.
+   If connectivity goes down then everything goes down.
+ c.Distributed Version Control: version database(meta data) is stored in local system as well as central server(remoteserver).
+ 
+WorkFlow of GIT:
+In the Github(remote repository), create an new repository with a Readme.md file.
+After we enter the GIT, first check its version with the command:
+git --version
+.git ------------------------this command will give the complete metadata
+a. Then clone the metadata(new repository) with the command
+     git clone <URL of git(remote) repository>
+     Ex: git clone https://github.com/mkodam1/DevOps
+     i)ls-----------we can see the new cloned repository here
+     ii)cd <cloned repository>-------------------navigating to cloned repository
+     iii)clear
+     iv)ls-------------------------------we can see the Readme file(Readme.md).
+     v)git status------------------------status is clean.
+b. Add file/files in workarea(Ex:file1).
+    i)git status---------------------- git status shows untracked files in red colour.
+c. git add <file1>-------------------------To add file1 to stagging.
+    i)git status---------------------- git status shows untracked files in green colour.This means that the file is in stagging.
+d.git commit -m "<message>"----------------------------changes are made to local repository. With 'm' option we can give the direct message without message editor.
+    i)git config --global user.email <"emailid">-----tells the git what is the emailid of the person who is commiting the changes.Config command is used to config the user.
+    ii)git config --global user.name <"name">------tells the git who is commiting the changes.
+       changes are committed only after the credentials are configured initially.
+   iii)git status---------------files are added to local repository.
+   iv)git log-------------------log shows the commit history(Ex:who did what, email,timestamp,what wa s committed).
+e. git push--------------------- pushes the changes to central repository.
+f. git pull---------------------pulls the changes from central repository to local repository.
+
+git difftool HEAD-----------------shows difference of a file in workarea and repository(existing version of file in repository)
+git diff <filename>---------------used to differentiate current file and previous file.*****************
+git commit -am "<message>"--------to commit all the existing files in repository at once.(not applicable to new file). 
+git rm <filename>-----------------is to remove tracked files
+external Diff Tool----------------To know the difference between external repository and local repository.
+.gitignore------------------------Git can specify which files or parts of your project should be ignored by Git using a . gitignore file.
+   Git will not track files and folders specified in . gitignore .********
+ 
+ g. git tag -a Release1.0 -m "<message>-------------to add tag to a release
+    a. git tag -l-----------------will list all the tags
+    b. git tag -d<tagname>--------to delete a tag
+    c. git tag -h-----------------will give all the help related to tag usage
+ h. git push --tags---------------will push the tags to central server
+ 
+ create a local repository in local machine with some files. Navigate to the repository.
+ i. git init----------------------will make this local repository in local machine a git repository.
+ Create a blank repository in github(central repository). Copy the URL of the repository.
+ j. git remote add origin <URL of the blank repository>-------adding the origin. creating a link between the two repos on git and github.
+ k. git push -u <repository name>-----------------------------will push all the local repository(local machine) contents to remote repository.
+ l. git reset ------------------it will restore deleted files.
+ m. Stash usage: To temporarily store work-in-progress files, so that our work area will be clean.Do some important work and once work is done we can pop and delete that file.
+    git stash save <"stashname">-----it will save all our files somewhere safe.
+    git stash -h---------------------will the the help regarding the command.
+    git stash list-------------------to list all the stashes which we saved.
+    git stash pop <"stashname">-------the stash will pop and get deleted.
+    
+  Branch: A branch is a diverse line of development. Any changes are visible only to that branch.
+  By default it is Master/Main.
+  Each commit has its ID, which is 40 characters long.
+  n. git branch <branchname>-----------------to create a branch.
+     git branch -a --------------------------all the branches are visible
+  o. git checkout <branchname>---------------purpose is to change from one branch to another
+      Ex: git checkout <samsung>-------------change from main branch to samsung branch
+  p. git log <branchname>--------------------which will give the logs of branch 
+      Ex: git log main-----------------------which will give the logs of branch main
+      
+      main and master branches are same.
+     
+     
+Personal Access Token-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
+ 
+Merge: To merge a branch with main branch.Developers usually branch out and work on an unstable feature and once its stable, then it will be merged with main branch.
+ q. git merge <branch name>-------------first navigate to main branch and then execute the command.
+    git branch -d <branch name>----------d option will delete the branch only if it has already been pushed and merged with the remote branch.
+    git branch -D <branch name>----------D option will force the branch to be deleted even if it isn't been pushed and merged with the remote branch.
+                                         The branch is deleted locally.
+    Conflicts: Conflicts are merged manually.
+    
+Rebase: To remove its base. To continue working on a branch but change the base of the branch. Rebase should happen from branches not specific commit.
+ r. git rebase <branch name>-------------first navigate to main branch and then execute the command.
+ s. Revert: Revert is used to correct erroneous commit. Is used to undo committed changes.
+    git revert <commit ID>--------------Here we can give seven or more characters of commit ID.
+    
+ t. Reset: Reset is used to undo uncommitted changes.
+    There are 3 types of git reset:
+    git reset --mixed---------------------default--------It will move the files from stagging area to work area. It will not touch the files in work area.
+                                                         Stagging area is clean.
+    git reset --soft
+    git reset --hard-------------------------------------It will delete any changes in work area and stagging area.
+    
+ u. Fork: When we fork a Public repository, we can copy the repository to our github login. It is a copy of repository. Forking a repository allows us to freely
+    experiment with changes without effecting the original report.
+    
+ v. Fetch: Fetch will only download the changes from remote repository and put it in local repository. Workarea will not be effected by local repository changes.
+    git fetch
+    
+  w. Restore: Restore is used to copy changes from another branch.No commit 
+     git restore
+     
+  x. Squash: Squash is used to do a single commit in place of multiple commits in our local branch.
+     Use case:
+     Squash and merge
+     squash and push
+     rebase and merge
