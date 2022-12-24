@@ -1,0 +1,112 @@
+Installation of Jenkins on Windows:
+
+Prerequisites:
+A system running Windows 10
+Java should be installed
+Access to an account with administrator privileges
+
+a.Go to the Jenkins download page. Under the Downloading Jenkins section for the long-term support (LTS) version of Jenkins. Click the Windows link to begin the download.
+b.Once the download is complete, run the jenkins.msi installation file.
+c.In the setup wizard, click Next and select the  destination folder and click Next.
+d.In the 'Service Logon Credentials' window, select 'Run service as LocalSystem(not recommended)'.
+e.In the Port Selection window, enter the port number you want Jenkins to run on. 
+  Click Test Port to check if the selected port is available, then click Next to continue.
+f.Select the directory where Java is installed on your system and click Next to proceed.
+g.Select the features you want to install with Jenkins and click Next to continue.
+h.Click Install to start the installation process.
+i.Once the installation is complete, click Finish to exit the install wizard.
+
+Unblock Jenkins:
+In browser, navigate to the port number which was selected during installation using the following address:
+http://localhost:<port number>
+
+Navigate to the location on your system specified by the Unblock Jenkins page.
+C:\ProgramData\Jenkins\.jenkins\secrets\initialAdminPassword
+Note:Enable hidden files.
+
+Open the initialAdminPassword file using a text editor such as Notepad.
+Copy the password from the initialAdminPassword file.
+Paste the password in the Administrator password field on the Unblock Jenkins page and click Continue to proceed.
+
+Customize Jenkins:
+After unlocking Jenkins, customize and prepare the Jenkins environment.
+a.Click 'Install suggested plugins' button to have Jenkins automatically install the most frequently used plugins.
+b.After plugins are installed, in 'Create First Admin User' page.Enter Username as 'Admin' and Password as 'Admin@123'.Enter other details, click 'Save and Continue'to proceed.
+c.On the Instance Configuration page, confirm the port number we want Jenkins to use and click 'Save and Finish' to finish the initial customization.
+d.Click the 'Start using Jenkins' button to move to the Jenkins dashboard.
+ 
+Continuous Integration & its Importance:
+a.Traditional Integration:
+In traditionalintegration, every developer branchs out and work on their code.
+During Release time, they merge their code.
+Merging is called integration.
+In this integration, you don't validate your code regularly.
+You validate only when integration happens.
+This may lead to some developers rewriting there code.As they didn't get the latest code changes of some other developer.
+
+Problems with Traditional Integration:
+a. Greater time gap as they integrate the code only during release time.
+b. Greater risk
+c. Difficult to implement all the details that have changed.
+d. Difficult to get the latest version of code early.
+e. Difficult to manage all the changes with the changing API versions.
+f. Difficult to rewrite the code.
+
+How to solve the problem:
+a. Split the entire chunk of code into segments.
+b. Keep small segments of manageable code.
+c. Integrate the segmented code, multiple times a day.
+d. Adopt a continuous integration methodology to coordinate with your team.
+
+What is continuous integration?
+It is the process of automating the building and testing of code, each time one of the team member commits changes to version control. 
+Any code change-->compile-->test-->integrate
+
+Development--->commit--->source control---->initiate CI process--->Build--->Test--->Testing----->Report--->Development
+
+Traditional integration vs continuous integration:
+1. Greater time gap				1. Time gap is much lesser
+2. Greater risk					2. Relatively lesser risk
+
+Importance of continuous integration:
+1.Improves quality-By running multiple unit tests and analysing various static code.
+2.Improves Productivity-Automating build of code saves a lot of time, thus improving productivity.
+3.Reduces Risk-Eiminate the risk of potential human errors by automating test.
+
+Popular continuous Integration Tools:
+1. Jenkins
+2. Gitlab CI
+3. CodeShip
+4. Bamboo
+5. Teamcity
+6. Travis CI
+
+What is Jenkins?
+"A continuous integration server which manages and control processes such as plan, code, build, test,deploy,operate and monitor in DevOps Environment".
+
+Plan			            Deploy
+Code			            Operate
+Build    JENKINS	  Monitor
+Test
+
+Note:Jenkins code is written in Java.So Java should be installed to run Jenkins.
+
+Why Jenkins is so popular?
+a. Open Source
+b. Good Plugin Support
+c. Good Community Support
+d. Fast and Reliable
+e. Good OS Support
+f. Scripted builds
+g. we can add more code(functionality)
+If we don't have native build of maven or gradle, we can write our own scripts to do builds.
+
+Features of Jenkins:
+a. Easy Installation Process
+b. Provides advance security
+c. Optimized Performance.
+d. Upgrades are easily available.
+e. Lightweight container support.
+f. Distributed Team Management.
+
+Note:Jenkins does not integrate with other tools on its own.We have to instruct it.
