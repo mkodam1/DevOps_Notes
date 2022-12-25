@@ -10,13 +10,13 @@ a.Check if Java Is Installed
   
  b.Download Java for Windows 10
   Navigate to the Oracle Java Downloads page.
+  Select Java 17 tab.
   Click the x64 Installer download link under the Windows category. 
   Download the installation file.
   
  c.Install & Configure the Installation Wizard
-   Create a folder called Java in Program Files.
    Double click on the Installer and finish installation.
-   After successfully Installed message appears,clocse the wizard.
+   After successfully Installed message appears,close the wizard.
    
  d.Set Environmental Variables in Java- Setting the Path and JAVA_HOME
     Open the Start menu and search for environment variables.
