@@ -2,7 +2,7 @@ Apache Maven Installation On Windows:
     Prerequisites: Java should be installed.
     
   a.From Maven download page, download the binary zip archive of Maven. 
-    Create a Folder named Maven in Program Files.
+    Install Maven in Program Files.
     Extract the Maven archive to C:\Program Files\Maven once the download is complete. 
     
   b.Set Environmental Variables for Maven- Setting the Path 
