@@ -15,7 +15,7 @@ a.Check if Java Is Installed
   Download the installation file.
   
  c.Install & Configure the Installation Wizard
-   Double click on the Installer and finish installation.
+   Double click on the Installer, select Program Files as the folder for installation and finish installation.
    After successfully Installed message appears,close the wizard.
    
  d.Set Environmental Variables in Java- Setting the Path and JAVA_HOME
