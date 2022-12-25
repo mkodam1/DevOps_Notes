@@ -5,7 +5,8 @@ A system running Windows 10
 Java should be installed
 Access to an account with administrator privileges
 
-a.Go to the Jenkins download page. Under the Downloading Jenkins section for the long-term support (LTS) version of Jenkins. Click the Windows link to begin the download.
+a.Go to the Jenkins download page. Under the Downloading Jenkins section for the long-term support (LTS) version of Jenkins.
+  Click the Windows link to begin the download.
 b.Once the download is complete, run the jenkins.msi installation file.
 c.In the setup wizard, click Next and select the  destination folder and click Next.
 d.In the 'Service Logon Credentials' window, select 'Run service as LocalSystem(not recommended)'.
@@ -20,7 +21,7 @@ Unblock Jenkins:
 In browser, navigate to the port number which was selected during installation using the following address:
 http://localhost:<port number>
 
-Navigate to the location on your system specified by the Unblock Jenkins page.
+Navigate to the location on your system(type the location and press enter) specified by the Unblock Jenkins page.
 C:\ProgramData\Jenkins\.jenkins\secrets\initialAdminPassword
 Note:Enable hidden files.
 
