@@ -75,7 +75,7 @@ Build Automation System is language specific.
      It will consist of Remote Repositories, Local Repositories, Core Engine and Plug-in's.
      
      Plug-in: It provides extra functionality and gives more commands.
-     Dependencies: Are required todointernal tasks, no extra commands.
+     Dependencies: Are required to do internal tasks, no extra commands.
      
      Dependencies:
      1. Maven comes into picture for dependencies.
