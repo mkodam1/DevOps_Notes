@@ -113,3 +113,10 @@ m. pwd-----------------------present(print) working directory or to know what di
 n. mkdir dir1-----------------to create a directory
   mkdir dir1 dir2 dir3------to create multiple directories.
   mkdir –p india/telengana/hyd----------------to create nested directories, where ‘p’ is parent directory.
+o. $ sudo su - (To change from a normal user to super user).
+p. exit --------(To change from a super user to normal user).
+q. To change password: $ sudo su -
+                       # password edureka(edureka is user name)
+                       Enter new UNIX password:
+                       Retype new UNIX password:
+                       passwd:password updated successfully
